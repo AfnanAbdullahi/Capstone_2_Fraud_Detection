@@ -48,6 +48,8 @@ The dataset comprises 339,607 transactions with details on merchant, transaction
 -	Numerical Columns: Transaction amounts range from $1.00 to $28,948.90, with geographical coordinates also provided.
 -	Categorical Columns: Includes transaction timestamps, merchant details, and purchase categories.
 -	Fraud Indicators: The dataset marks transactions as fraudulent or legitimate, with a fraud incidence rate of 0.53%.
+
+ ![Distribution of Data](images/Fraud_Distrabution.png)
  
 ### Key Findings from EDA
 -	Transaction Patterns: Observations indicate variations in fraud incidence across different times of day, with peaks during late-night hours.
@@ -55,6 +57,7 @@ The dataset comprises 339,607 transactions with details on merchant, transaction
 -	Category Analysis: Certain categories like 'Grocery POS' and 'Shopping Net' showed a higher propensity for fraud.
 -	Correlation Insights: A notable positive correlation exists between transaction amounts and the occurrence of fraud.
  
+![Correlation Insights](images/heatmap_correlation_variables.png)
 
 ## Preprocessing
 The preprocessing phase is critical for preparing the dataset for effective machine learning model training. This stage involves various tasks aimed at enhancing the data quality and the predictive power of the model.
