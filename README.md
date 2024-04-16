@@ -80,6 +80,8 @@ After preparing the data, selecting the most relevant features is crucial to opt
 -	Initial Feature Importance: Utilizing a Random Forest to assess the relevance of features.
 -	Recursive Feature Elimination (RFE): Refining the selection by iteratively removing the least important features.
 -	Univariate Selection: Employing statistical tests to select the features with the strongest relationship to the fraud outcome.
+
+  ![Feature Importance](images/Feature_Importance.png)
  
 ### Selected Features
 The final features chosen through the selection process include:
@@ -108,6 +110,7 @@ Starting with the basics, we initiated our modeling with Logistic Regression. De
 -	Precision for non-fraudulent transactions (Class 0): Impressively high at 0.99, indicative of the model's proficiency in identifying legitimate transactions.
 -	Recall for fraudulent transactions (Class 1): At 0.80, it illustrates a decent ability to detect fraudulent transactions, but there's room for improvement.
 
+![
  
 
 ### Random Forest Classifier
