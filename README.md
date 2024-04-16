@@ -42,6 +42,7 @@ The data used for this project is a comprehensive simulated dataset of credit ca
 The dataset comprises 339,607 transactions with details on merchant, transaction amounts, purchase categories, and fraud labels. This semi-cleaned dataset serves as a curated foundation for our analysis, emphasizing feature engineering, model development, and tuning.
 
 ### Variables Table
+![Variables Table](images/Variables%20table.png)
  
 ### Descriptive Statistics and Initial Insights
 -	Numerical Columns: Transaction amounts range from $1.00 to $28,948.90, with geographical coordinates also provided.
