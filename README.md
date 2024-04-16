@@ -165,11 +165,12 @@ With each model fine-tuned to the unique characteristics of our dataset, we witn
 ## Utilizing the Best Parameters for Model Refinement
 After hyperparameter tuning, we integrated the best parameters back into our models and retrained them. This step is pivotal as it ensures that the models are now primed with settings that are tailored to our specific dataset, leading to enhanced performance.
 
+
 ### 1. Optimized Logistic Regression
 Leveraging a strong regularization parameter (C=1e+04) and the 'lbfgs' solver, we saw the model's performance solidify with excellent precision and a better balance in recall:
 
 -	Precision for Class 0: Remained at a stellar 0.99.
--	Recall for Class 1: Slightly improved to 0.81, indicating a better ability to detect fraudulent transactions after tuning.
+-	Recall for Class 1: Slightly improved, indicating a better ability to detect fraudulent transactions after tuning.
 -	ROC-AUC Score: Indicated improved discriminatory capacity at 0.827.
 
  
@@ -187,6 +188,8 @@ The Gradient Boosting model, now configured with 200 estimators, a learning rate
 -	Precision for Class 1: An excellent 0.93.
 -	Recall for Class 1: A notable rise to 0.71.
 -	ROC-AUC Score: Reached 0.975, indicating a substantial boost in performance.
+
+
  
 ### 4. Enhanced XGBoost Classifier
 The XGBoost model, known for its superior performance, did not disappoint. With its optimized settings, it achieved:
