@@ -1,5 +1,7 @@
 # Capstone_2_Fraud_Detection
 
+![Banner](images/README PAGE BANNER.png)
+
 # Credit Card Fraud Detection Project
 
 ## Introduction
