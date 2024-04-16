@@ -76,6 +76,7 @@ The preprocessing phase is critical for preparing the dataset for effective mach
 ### Feature Selection
 After preparing the data, selecting the most relevant features is crucial to optimize the machine learning model's performance. This process helps in reducing overfitting, enhancing model accuracy, and decreasing training time.
 
+
 ### Execution Plan for Feature Selection
 -	Initial Feature Importance: Utilizing a Random Forest to assess the relevance of features.
 -	Recursive Feature Elimination (RFE): Refining the selection by iteratively removing the least important features.
@@ -110,7 +111,7 @@ Starting with the basics, we initiated our modeling with Logistic Regression. De
 -	Precision for non-fraudulent transactions (Class 0): Impressively high at 0.99, indicative of the model's proficiency in identifying legitimate transactions.
 -	Recall for fraudulent transactions (Class 1): At 0.80, it illustrates a decent ability to detect fraudulent transactions, but there's room for improvement.
 
-![
+![Initial LR Results](images/Initial_LR_results.png)
  
 
 ### Random Forest Classifier
@@ -118,14 +119,21 @@ The Random Forest classifier, with its ensemble of decision trees, offers a robu
 -	Precision for Class 1: A substantial 0.95, showcasing the model's high accuracy when predicting fraud.
 -	Recall for Class 1: With a score of 0.74, the model demonstrates a strong ability to identify the majority of fraudulent activities.
 
+![Initial RF Results](images/Initial_RF_results.png)
+
  
 ### Gradient Boosting Classifier
 The Gradient Boosting model didn't lag far behind, with its focus on reducing errors from previous trees:
 -	Recall for Class 1: Lower than desired at 0.40, indicating that while the model is good at predicting non-fraudulent transactions, it might miss several fraudulent instances.
+
+![Initial GB Results](images/Initial_GB_results.png)
+
  
 ### XGBoost Classifier
 The XGBoost model emerged as a frontrunner, balancing performance and speed:
 -	Recall for Class 1: Achieving a 0.74, it parallels the Random Forest in identifying fraudulent transactions and surpasses it slightly in precision for Class 1.
+
+ ![Initial XGB Results](images/Initial_XGB_results.png)
 
  
 
@@ -135,22 +143,22 @@ The pursuit of perfection led us to the realm of hyperparameter tuning. The proc
 ### Logistic Regression Tuning
 The pursuit of the optimal Logistic Regression model brought us to a regularization strength (C) of a staggering 1e+04, and the 'lbfgs' solver stood out as the most efficient algorithm for our dataset, striking a balance between computational efficiency and model performance.
 
- 
+ ![LR Tuning](images/LG_Tuning.png)
 
 ### Random Forest Tuning
 With the Random Forest, the forest grew denser—settling at 300 trees (estimators) and a max depth of 10. These parameters suggested that the model needed a certain level of complexity to unravel the nuanced patterns hidden in our data.
 
- 
+ ![RF Tuning](images/RF_Tuning.png)
 
 ### Gradient Boosting Tuning
 The Gradient Boosting model, after tuning, advocated for 200 estimators, a learning rate of 0.1, and a max depth of 7, indicating a preference for steady learning and depth to adequately model the intricacies of the dataset.
 
- 
+ ![GB Tuning](images/GB_Tuning.png)
 
 ### XGBoost Tuning
 The XGBoost tuning concluded with 200 estimators, a learning rate of 0.1, a max depth of 7, and a full subsample, signaling a model that is robust and eager to learn from the full breadth of data without the risk of overfitting.
 
- 
+![XGB Tuning](images/XGB_Tuning.png)
 
 With each model fine-tuned to the unique characteristics of our dataset, we witnessed marked improvements across all performance metrics. The models were now equipped not only to distinguish between legitimate and fraudulent transactions but to do so with a newfound level of precision and reliability.
 
@@ -194,14 +202,18 @@ The XGBoost model, once fine-tuned, stood out as the leading candidate. To under
 ### Permutation Importance
 This technique reaffirmed the importance of the transaction amount (amt) and transaction hour as key predictors, indicating the model's sensitivity to transaction size and timing.
 
+![Perm Importance](images/Perm_Importance.png)
  
 ### Partial Dependence Plots
 These plots unveiled the intricate relationship between certain features and the likelihood of fraud. For example, they suggested that as the transaction amount increases, so does the probability of fraud.
+
+![Partial Plots](images/Partial_plots.png)
  
 ### SHAP Values
 SHAP values provided a granular view of how each feature impacts the model's output, corroborating that features like the transaction amount and hour hold substantial weight in the model's predictions.
 
- 
+![SHAP](images/SHAP.png)
+
 ## Conclusion
 Post-tuning, the models demonstrated a significant leap in predictive accuracy. The meticulous adjustment of hyperparameters, coupled with the comprehensive evaluation metrics and interpretation methods, has furnished us with a potent tool in the fight against credit card fraud. The XGBoost model, in particular, has proven its mettle, achieving outstanding precision and recall, fulfilling our project's ambitious objective, and assuring us of its readiness for deployment in real-world scenarios.
 
